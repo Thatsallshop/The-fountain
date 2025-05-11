@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Fountain | Elegant Gadget Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Splide CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css" />
+    
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Header -->
@@ -101,10 +105,17 @@
 
         <!-- Product Card: Tile Mate Bluetooth Tracker -->
         <div class="bg-white shadow-lg rounded-xl p-4 transition-transform duration-300 hover:scale-105">
-          <div class="space-y-2 mb-4">
-          <img src="images/tilemate.jpg" alt="Tile mate Front" class="rounded-md" />
-         <img src="images/tilemate2.jpg" alt="Tile mate Side" class="rounded-md" />
-          </div>
+
+<div class="splide mb-4" aria-label="LED Smart Desk Lamp Images">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide"><img src="images/tilemate.jpg" alt="Lamp view 1" class="rounded-md" /></li>
+      <li class="splide__slide"><img src="images/tilemate2.jpg" alt="Lamp view 2" class="rounded-md" /></li>
+      <li class="splide__slide"><img src="images/led-lamp-3.jpg" alt="Lamp view 3" class="rounded-md" /></li>
+    </ul>
+  </div>
+</div>
+          
           <h3 class="text-xl font-medium">Tile Mate Bluetooth Tracker</h3>
           <p class="text-gray-600 mb-2">Track your items like keys or wallet with this Bluetooth tracker.</p>
           <p class="text-lg font-semibold mb-4">€32.03</p>
@@ -138,5 +149,19 @@
 <footer class="text-center py-6 text-sm text-gray-500 bg-white border-t">
   © 2025 The Fountain. All rights reserved.
 </footer>
-
+    
+<!-- Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.splide').forEach(el => {
+      new Splide(el, {
+        type: 'loop',
+        autoplay: true,
+        heightRatio: 0.6,
+      }).mount();
+    });
+  });
+</script>
+    
 </body> </html> ```
