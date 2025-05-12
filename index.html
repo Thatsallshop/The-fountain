@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Fountain | Elegant Gadget Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
+//to automate picture size
+    <style>
+    .splide__slide img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  </style>
     
 <link
   rel="stylesheet"
@@ -20,14 +28,6 @@
         <img src="logo.png" alt="The Fountain Logo" class="h-12" />
         <nav>
           <ul class="flex space-x-6 text-lg">
-
-<style>
-  .splide__slide img {
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-  }
-</style>
             
             <li><a href="#home" class="hover:text-blue-600">Home</a></li>
             <li><a href="#products" class="hover:text-blue-600">Products</a></li>
